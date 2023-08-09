@@ -580,6 +580,7 @@ a {
     display: flex;
     margin-top: 55px;
     gap: 30px;
+    overflow: hidden;
 }
 
 .blog .item:hover {
@@ -587,13 +588,11 @@ a {
 }
 
 .blog .blog-list .item {
-    flex: 1;
-    width: 33%;
+    width: calc(33.33% - 20px);
     height: 467px;
     flex-shrink: 0;
     border-radius: 16px;
     background: #fff;
-    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
 }
 .blog .blog-list .thumb {
     object-fit: cover;
@@ -645,6 +644,28 @@ a {
     color: #171100;
 }
 
+.blog .blog-list .btn {
+    font-size: 1.4rem;
+}
+
 .blog .blog-list .btn:hover {
     background: var(--primary-color);
+}
+.blog .dots {
+    display: flex;
+    margin-top: 38px;
+    justify-content: center;
+    gap: 6px;
+}
+
+.blog .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #634700;
+    cursor: pointer;
+}
+.blog .dot.active {
+    background: var(--primary-color);
+    cursor: default;
 }
